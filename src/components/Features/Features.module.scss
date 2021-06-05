@@ -1,0 +1,33 @@
+@import 'responsive';
+
+.features {
+   padding:10rem 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @include respond(tab-land) {
+            justify-content: center;
+        }
+    }
+    .feature {
+        width:30rem;
+        padding:3rem 2rem;
+        text-align: center;
+        i {
+            color:var(--color-main);
+        }
+        &__header {
+            color:var(--color-sec);
+            font-size: 2rem;
+            font-weight: 800;
+            padding:1.5rem 0;
+        }
+        &__para {
+            color:var(--color-par);
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+    }
+}

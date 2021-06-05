@@ -1,9 +1,22 @@
-
+import Header from './components/Header/Header'
+import Landing from './components/Landing/Landing'
+import Features from './components/Features/Features'
+import Services from './components/Services/Services'
 
 function App() {
   return (
     <>
-      <h1>Hello This Agency Template</h1>
+    <header>
+        <Header/>
+    </header>
+    <main>
+      <Landing/>
+      <Features/>
+      <Services/>
+    </main>
+    <footer>
+      <h1>Footer</h1>
+    </footer>
     </>
   );
 }
