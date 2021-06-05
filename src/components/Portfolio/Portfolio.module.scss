@@ -1,0 +1,28 @@
+.portfolio {
+    margin-top: 30rem;
+    padding:10rem 0;
+    position: relative;
+    background-color: var(--color-section-bg);
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        grid-gap: 2rem;
+    }
+    .project {
+        &__intro {
+            background-color: #ffffff;
+            padding: 1rem 1.5rem;
+            margin-top: -0.5rem
+        }
+        &__image {
+            width:100%;
+        }
+        &__title {
+            color: var(--color-sec);
+        }
+        &__para {
+            line-height: 1.8;
+            color:var(--color-par)
+        }
+    }
+}

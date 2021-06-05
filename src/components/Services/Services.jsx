@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {services,services__container, services__wrapper, services__image} from './Services.module.scss'
 import Service from './Service'
 import serviceImage from '../../images/service.png'
@@ -41,7 +41,9 @@ const Services = () => {
             for the Internet or an intranet.`
         }
     ]
-
+    useEffect(() => {
+        console.log('Entering The Service Section');
+    },[])
     return (
         <div className={services}>
             <SectionTitle title='services' subtitle={`Don't be busy, be productive`}/>

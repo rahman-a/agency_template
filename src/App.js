@@ -2,6 +2,7 @@ import Header from './components/Header/Header'
 import Landing from './components/Landing/Landing'
 import Features from './components/Features/Features'
 import Services from './components/Services/Services'
+import Portfolio from './components/Portfolio/Portfolio'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Landing/>
       <Features/>
       <Services/>
+      <Portfolio/>
     </main>
     <footer>
       <h1>Footer</h1>
