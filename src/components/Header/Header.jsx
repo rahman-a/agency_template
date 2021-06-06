@@ -3,7 +3,7 @@ import {wrapper} from './Header.module.scss'
 import Logo from '../Logo/Logo'
 import Navbar from '../Navbar/Navbar'
 
-const header = () => {
+const Header = () => {
     return (
         <div className="container">
             <div className={wrapper}>
@@ -12,7 +12,8 @@ const header = () => {
             </div>
         </div>
         
+        
     )
 }
 
-export default header
+export default Header

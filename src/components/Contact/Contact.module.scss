@@ -1,0 +1,43 @@
+@import 'responsive';
+.contact {
+    position: relative;
+    margin-top: 25rem;
+    padding:10rem 0;
+    background-color: var(--color-section-bg);
+    &__header {
+        font-size: 5.5rem;
+        color:var(--color-sec);
+        @include respond(phone) {
+            font-size: 4.5rem;
+        }
+    }
+    &__email {
+        font-size: 4.5rem;
+        @include respond(phone) {
+            font-size: 3.5rem;
+        }
+        a {
+            text-decoration: none;
+            color:var(--color-main)
+        }
+    }
+    &__social {
+        display: flex;
+        align-items: center;
+        &_par {
+            font-size: 1.5rem;
+            color:var(--color-par)
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 2rem;
+    }
+    &__link {
+        text-decoration: none;
+        color:var(--color-sec)
+    }
+}

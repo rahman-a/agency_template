@@ -1,9 +1,9 @@
 import React from 'react'
 import {service, service__content, service__header, service__para} from './Services.module.scss'
 
-const Service = ({icon, text, para}) => {
+const Service = ({icon, text, para, animate}) => {
     return (
-        <div className={service}>
+        <div className={service} data-aos={animate}>
             <i className={icon}></i>
             <div className={service__content}>
                 <h1 className={service__header}>{text}</h1>

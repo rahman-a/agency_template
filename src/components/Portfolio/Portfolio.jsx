@@ -13,30 +13,39 @@ const Portfolio = () => {
             image:Img1,
             title:'GardenLand',
             text:`My creative ability is very difficult to measure because it can 
-            manifest in so many surprising and.`
+            manifest in so many surprising and.`,
+            animate:'fade-right'
         },
         {
             id:2,
             image:Img2,
             title:'Natours',
             text:`My creative ability is very difficult to measure because it can 
-            manifest in so many surprising and.`
+            manifest in so many surprising and.`,
+            animate:'zoom-in'
         },
         {
             id:3,
             image:Img3,
             title:'Weather API',
             text:`My creative ability is very difficult to measure because it can 
-            manifest in so many surprising and.`
+            manifest in so many surprising and.`,
+            animate:'fade-left'
         }
     ]
     return (
-        <div class={portfolio}>
-            <SectionTitle title='Portfolio' subtitle={`If you do it right, it will last forever.`}/>
+        <div className={portfolio}>
+            <SectionTitle title='Portfolio' subtitle={`If you do it right, it will last forever.`} id='portfolio'/>
             <div className="container">
                 <div className={portfolio__wrapper}>
                     {all_projects.map(pro => (
-                        <Project pro={pro} key={pro.id}/>
+                        <Project 
+                        animate={pro.animate} 
+                        id={pro.id} 
+                        image={pro.image} 
+                        title={pro.title} 
+                        text={pro.text} 
+                        key={pro.id}/>
                     ))}
                 </div>
             </div>

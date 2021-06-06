@@ -1,0 +1,10 @@
+.header {
+    width:100vw;
+    position: fixed;
+    top:0;
+    z-index: 99999999999;
+}
+
+.aos-init:not(.aos-animate):after { 
+    position:fixed
+}

@@ -10,7 +10,9 @@ const Features = () => {
             text:'Tell Us Your Idea',
             para:`Lorem ipsum dolor sit amet, consectetur 
             adipiscing elit, sed do eiusmod tempor 
-            incididunt ut lab`
+            incididunt ut lab`,
+            animate:'fade-right'
+
         },
         {
             id:2,
@@ -18,7 +20,8 @@ const Features = () => {
             text:'We Will Do All The WOrk',
             para:`Lorem ipsum dolor sit amet, consectetur 
             adipiscing elit, sed do eiusmod tempor 
-            incididunt ut lab`
+            incididunt ut lab`,
+            animate:'fade-up'
         },
         {
             id:3,
@@ -26,7 +29,8 @@ const Features = () => {
             text:'Your Product is Worldwide',
             para:`Lorem ipsum dolor sit amet, consectetur 
             adipiscing elit, sed do eiusmod tempor 
-            incididunt ut lab`
+            incididunt ut lab`,
+            animate:'fade-left'
         }
     ]
     return (
@@ -34,7 +38,11 @@ const Features = () => {
             <div className="container">
                 <div className={features__wrapper}>
                     {all_features.map(feat => (
-                    <Feature icon={feat.icon} text={feat.text} para={feat.para} key={feat.id}/>
+                    <Feature icon={feat.icon} 
+                    text={feat.text} 
+                    para={feat.para} 
+                    key={feat.id}
+                    animate={feat.animate}/>
                     ))}
                 </div>
             </div>

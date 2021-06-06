@@ -1,8 +1,10 @@
 import React, {useRef} from 'react'
 import {navbar, nav_btn, list, list_wrapper, item, link,top_arrow} from './Navbar.module.scss'
 import { useDetectClickOutside } from 'react-detect-click-outside';
+import {HashLink as Link} from 'react-router-hash-link'
 
-const Navbar = () => {   
+const Navbar = () => {  
+    const navLinks = ['Services','Portfolio', 'About', 'Contact']
     const list_ref = useRef(null)  
     const nav_ref = useRef(null) 
     const topArrow = useRef(null) 
@@ -31,10 +33,17 @@ const Navbar = () => {
             ref={list_wrapper_ref} 
             >
                 <ul className={list} ref={list_ref}>
-                    <li className={item}><a href="#services" className={link}>Services</a></li>
-                    <li className={item}><a href="#portfolio" className={link}>Portfolio</a></li>
-                    <li className={item}><a href="#about" className={link}>About</a></li>
-                    <li className={item}><a href="#contact" className={link}>Contact</a></li>
+                    {navLinks.map(lnk => (
+                        <li className={item} key={lnk}>
+                            <Link smooth 
+                            to={`#${lnk.toLocaleLowerCase()}`} 
+                            className={link}>{lnk}</Link>
+                        </li>
+
+                    ))}
+                    {/* <li className={item}><Link smooth to="#portfolio" className={link}>Portfolio</Link></li>
+                    <li className={item}><Link smooth to="#about" className={link}>About</Link></li>
+                    <li className={item}><Link smooth to="#contact" className={link}>Contact</Link></li> */}
                 </ul>
             </div>
            
