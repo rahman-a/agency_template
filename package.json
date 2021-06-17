@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "homepage":"http:rahman-a.github.io/agency_template",
+    "homepage":"http:rahman-a.github.io/portfolio_template",
     "predeploy":"npm run build",
     "deploy":"gh-pages -d build"
   },
